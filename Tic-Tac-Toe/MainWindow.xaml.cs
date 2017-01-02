@@ -4,9 +4,7 @@ using System.Windows.Media;
 
 namespace Tic_Tac_Toe
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// <summary>Interaction logic for MainWindow.xaml</summary>
     public partial class MainWindow : INotifyPropertyChanged
     {
         private string _currentPlayer = "X";
@@ -110,6 +108,8 @@ namespace Tic_Tac_Toe
 
         #endregion Properties
 
+        /// <summary>Checks whether the board is full or completed with a win.</summary>
+        /// <returns>Returns true if the board is full or completed with a win</returns>
         private bool CheckBoardState()
         {
             if (TopRow)
@@ -189,6 +189,7 @@ namespace Tic_Tac_Toe
             return false;
         }
 
+        /// <summary>Ensures that the grid's state is current.</summary>
         private void UpdateGrid()
         {
             OnPropertyChanged("TopLeft");
@@ -202,6 +203,7 @@ namespace Tic_Tac_Toe
             OnPropertyChanged("BottomRight");
         }
 
+        /// <summary>Resets all the Button colors back to black.</summary>
         private void ResetButtonColors()
         {
             btnTopLeft.Foreground = Brushes.Black;
@@ -215,6 +217,9 @@ namespace Tic_Tac_Toe
             btnBottomRight.Foreground = Brushes.Black;
         }
 
+        /// <summary>Assigns a specific grid location to the current player, assuming the space is available.</summary>
+        /// <param name="vertical">Vertical position of the intended placement</param>
+        /// <param name="horizontal">Horizontal position of the intended placement</param>
         private void ChooseGridLocation(int vertical, int horizontal)
         {
             if (!GameOver && string.IsNullOrWhiteSpace(TTTGrid[vertical, horizontal]))
@@ -226,6 +231,8 @@ namespace Tic_Tac_Toe
             }
         }
 
+        /// <summary>Ends the current game.</summary>
+        /// <param name="win">Was the game completed with a win?</param>
         private void EndGame(bool win)
         {
             if (win)
