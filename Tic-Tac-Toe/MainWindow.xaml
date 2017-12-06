@@ -21,38 +21,38 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Border Grid.Column="0" Grid.Row="0" Height="175" Width="175" BorderThickness="0,0,5,5" BorderBrush="Black">
-            <Button x:Name="btnTopLeft" Content="{Binding Path=TopLeft, UpdateSourceTrigger=PropertyChanged}"  Click="btnTopLeft_Click" />
+            <Button x:Name="BtnTopLeft" Content="{Binding Path=TopLeft, UpdateSourceTrigger=PropertyChanged}"  Click="BtnTopLeft_Click" />
         </Border>
         <Border Grid.Column="1" Grid.Row="0" Height="175" Width="175" BorderThickness="0,0,5,5" BorderBrush="Black">
-            <Button x:Name="btnTopCenter" Click="btnTopCenter_Click" Content="{Binding Path=TopCenter}" />
+            <Button x:Name="BtnTopCenter" Click="BtnTopCenter_Click" Content="{Binding Path=TopCenter}" />
         </Border>
         <Border Grid.Column="2" Grid.Row="0" Height="175" Width="175" BorderThickness="0,0,0,5" BorderBrush="Black">
-            <Button x:Name="btnTopRight" Click="btnTopRight_Click" Content="{Binding Path=TopRight}" />
+            <Button x:Name="BtnTopRight" Click="BtnTopRight_Click" Content="{Binding Path=TopRight}" />
         </Border>
         <Border Grid.Column="0" Grid.Row="1" Height="175" Width="175" BorderThickness="0,0,5,5" BorderBrush="Black">
-            <Button x:Name="btnCenterLeft" Click="btnCenterLeft_Click" Content="{Binding Path=CenterLeft}" />
+            <Button x:Name="BtnCenterLeft" Click="BtnCenterLeft_Click" Content="{Binding Path=CenterLeft}" />
         </Border>
         <Border Grid.Column="1" Grid.Row="1" Height="175" Width="175" BorderThickness="0,0,5,5" BorderBrush="Black">
-            <Button x:Name="btnCenter" Click="btnCenter_Click" Content="{Binding Path=Center}" />
+            <Button x:Name="BtnCenter" Click="BtnCenter_Click" Content="{Binding Path=Center}" />
         </Border>
         <Border Grid.Column="2" Grid.Row="1" Height="175" Width="175" BorderThickness="0,0,0,5" BorderBrush="Black">
-            <Button x:Name="btnCenterRight" Click="btnCenterRight_Click" Content="{Binding Path=CenterRight}" />
+            <Button x:Name="BtnCenterRight" Click="BtnCenterRight_Click" Content="{Binding Path=CenterRight}" />
         </Border>
         <Border Grid.Column="0" Grid.Row="2" Height="175" Width="175" BorderThickness="0,0,5,0" BorderBrush="Black" Margin="0,0,0,10">
-            <Button x:Name="btnBottomLeft" Click="btnBottomLeft_Click" Content="{Binding Path=BottomLeft}" />
+            <Button x:Name="BtnBottomLeft" Click="BtnBottomLeft_Click" Content="{Binding Path=BottomLeft}" />
         </Border>
         <Border Grid.Column="1" Grid.Row="2" Height="175" Width="175" BorderThickness="0,0,5,0" BorderBrush="Black" Margin="0,0,0,10">
-            <Button x:Name="btnBottomCenter" Click="btnBottomCenter_Click" Content="{Binding Path=BottomCenter}" />
+            <Button x:Name="BtnBottomCenter" Click="BtnBottomCenter_Click" Content="{Binding Path=BottomCenter}" />
         </Border>
         <Border Grid.Column="2" Grid.Row="2" Height="175" Width="175" BorderThickness="0" BorderBrush="Black" Margin="0,0,0,10">
-            <Button x:Name="btnBottomRight" Click="btnBottomRight_Click" Content="{Binding Path=BottomRight}" />
+            <Button x:Name="BtnBottomRight" Click="BtnBottomRight_Click" Content="{Binding Path=BottomRight}" />
         </Border>
         <TextBlock Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" FontSize="32" Text="{Binding CurrentPlayerTurn}" TextAlignment="Center" Margin="0,0,0,10" />
         <TextBlock Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" FontSize="32" Text="{Binding Status}" TextAlignment="Center" Margin="0,0,0,10" />
         <TextBlock Grid.Column="0" Grid.Row="5" FontSize="24" Text="{Binding Player1WinsToString}" TextAlignment="Center" Margin="0,0,0,10" />
         <TextBlock Grid.Column="1" Grid.Row="5" FontSize="24" Text="{Binding TieGamesToString}" TextAlignment="Center" Margin="0,0,0,10" />
         <TextBlock Grid.Column="2" Grid.Row="5" FontSize="24" Text="{Binding Player2WinsToString}" TextAlignment="Center" Margin="0,0,0,10" />
-        <Button x:Name="btnNewGame" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Width="200" Height="50" FontSize="32" Content="_New Game"  IsDefault="True" Click="btnNewGame_Click" IsEnabled="False" Margin="0,0,50,0" />
-        <Button x:Name="btnExit" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Width="200" Height="50" FontSize="32" Content="_Exit" IsCancel="True" Click="btnExit_Click" Margin="50,0,0,0" />
+        <Button x:Name="BtnNewGame" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Width="200" Height="50" FontSize="32" Content="_New Game"  IsDefault="True" Click="BtnNewGame_Click" IsEnabled="False" Margin="0,0,50,0" />
+        <Button x:Name="BtnExit" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Width="200" Height="50" FontSize="32" Content="_Exit" IsCancel="True" Click="BtnExit_Click" Margin="50,0,0,0" />
     </Grid>
 </Window>

@@ -115,65 +115,65 @@ namespace Tic_Tac_Toe
             if (TopRow)
             {
                 EndGame(true);
-                btnTopLeft.Foreground = Brushes.Blue;
-                btnTopCenter.Foreground = Brushes.Blue;
-                btnTopRight.Foreground = Brushes.Blue;
+                BtnTopLeft.Foreground = Brushes.Blue;
+                BtnTopCenter.Foreground = Brushes.Blue;
+                BtnTopRight.Foreground = Brushes.Blue;
                 return true;
             }
             else if (CenterRow)
             {
                 EndGame(true);
-                btnCenterLeft.Foreground = Brushes.Blue;
-                btnCenter.Foreground = Brushes.Blue;
-                btnCenterRight.Foreground = Brushes.Blue;
+                BtnCenterLeft.Foreground = Brushes.Blue;
+                BtnCenter.Foreground = Brushes.Blue;
+                BtnCenterRight.Foreground = Brushes.Blue;
                 return true;
             }
             else if (BottomRow)
             {
                 EndGame(true);
-                btnBottomLeft.Foreground = Brushes.Blue;
-                btnBottomCenter.Foreground = Brushes.Blue;
-                btnBottomRight.Foreground = Brushes.Blue;
+                BtnBottomLeft.Foreground = Brushes.Blue;
+                BtnBottomCenter.Foreground = Brushes.Blue;
+                BtnBottomRight.Foreground = Brushes.Blue;
                 return true;
             }
             else if (LeftColumn)
             {
                 EndGame(true);
-                btnTopLeft.Foreground = Brushes.Blue;
-                btnCenterLeft.Foreground = Brushes.Blue;
-                btnBottomLeft.Foreground = Brushes.Blue;
+                BtnTopLeft.Foreground = Brushes.Blue;
+                BtnCenterLeft.Foreground = Brushes.Blue;
+                BtnBottomLeft.Foreground = Brushes.Blue;
                 return true;
             }
             else if (CenterColumn)
             {
                 EndGame(true);
-                btnTopCenter.Foreground = Brushes.Blue;
-                btnCenter.Foreground = Brushes.Blue;
-                btnBottomCenter.Foreground = Brushes.Blue;
+                BtnTopCenter.Foreground = Brushes.Blue;
+                BtnCenter.Foreground = Brushes.Blue;
+                BtnBottomCenter.Foreground = Brushes.Blue;
                 return true;
             }
             else if (RightColumn)
             {
                 EndGame(true);
-                btnTopRight.Foreground = Brushes.Blue;
-                btnCenterRight.Foreground = Brushes.Blue;
-                btnBottomRight.Foreground = Brushes.Blue;
+                BtnTopRight.Foreground = Brushes.Blue;
+                BtnCenterRight.Foreground = Brushes.Blue;
+                BtnBottomRight.Foreground = Brushes.Blue;
                 return true;
             }
             else if (DiagonalLeft)
             {
                 EndGame(true);
-                btnTopLeft.Foreground = Brushes.Blue;
-                btnCenter.Foreground = Brushes.Blue;
-                btnBottomRight.Foreground = Brushes.Blue;
+                BtnTopLeft.Foreground = Brushes.Blue;
+                BtnCenter.Foreground = Brushes.Blue;
+                BtnBottomRight.Foreground = Brushes.Blue;
                 return true;
             }
             else if (DiagonalRight)
             {
                 EndGame(true);
-                btnTopRight.Foreground = Brushes.Blue;
-                btnCenter.Foreground = Brushes.Blue;
-                btnBottomLeft.Foreground = Brushes.Blue;
+                BtnTopRight.Foreground = Brushes.Blue;
+                BtnCenter.Foreground = Brushes.Blue;
+                BtnBottomLeft.Foreground = Brushes.Blue;
                 return true;
             }
 
@@ -206,15 +206,15 @@ namespace Tic_Tac_Toe
         /// <summary>Resets all the Button colors back to black.</summary>
         private void ResetButtonColors()
         {
-            btnTopLeft.Foreground = Brushes.Black;
-            btnTopCenter.Foreground = Brushes.Black;
-            btnTopRight.Foreground = Brushes.Black;
-            btnCenterLeft.Foreground = Brushes.Black;
-            btnCenter.Foreground = Brushes.Black;
-            btnCenterRight.Foreground = Brushes.Black;
-            btnBottomLeft.Foreground = Brushes.Black;
-            btnBottomCenter.Foreground = Brushes.Black;
-            btnBottomRight.Foreground = Brushes.Black;
+            BtnTopLeft.Foreground = Brushes.Black;
+            BtnTopCenter.Foreground = Brushes.Black;
+            BtnTopRight.Foreground = Brushes.Black;
+            BtnCenterLeft.Foreground = Brushes.Black;
+            BtnCenter.Foreground = Brushes.Black;
+            BtnCenterRight.Foreground = Brushes.Black;
+            BtnBottomLeft.Foreground = Brushes.Black;
+            BtnBottomCenter.Foreground = Brushes.Black;
+            BtnBottomRight.Foreground = Brushes.Black;
         }
 
         /// <summary>Assigns a specific grid location to the current player, assuming the space is available.</summary>
@@ -251,7 +251,7 @@ namespace Tic_Tac_Toe
 
             //ToggleGridButtons(false);
             GameOver = true;
-            btnNewGame.IsEnabled = true;
+            BtnNewGame.IsEnabled = true;
         }
 
         #region Window-Manipulation Methods
@@ -266,15 +266,15 @@ namespace Tic_Tac_Toe
 
         #region Button-Click Methods
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btnNewGame_Click(object sender, RoutedEventArgs e)
+        private void BtnNewGame_Click(object sender, RoutedEventArgs e)
         {
             GameOver = false;
-            btnNewGame.IsEnabled = false;
+            BtnNewGame.IsEnabled = false;
             TTTGrid = new string[3, 3];
             DataContext = this;
             ResetButtonColors();
@@ -285,47 +285,47 @@ namespace Tic_Tac_Toe
 
         #region Grid Button-Click Methods
 
-        private void btnTopLeft_Click(object sender, RoutedEventArgs e)
+        private void BtnTopLeft_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(0, 0);
         }
 
-        private void btnTopCenter_Click(object sender, RoutedEventArgs e)
+        private void BtnTopCenter_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(0, 1);
         }
 
-        private void btnTopRight_Click(object sender, RoutedEventArgs e)
+        private void BtnTopRight_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(0, 2);
         }
 
-        private void btnCenterLeft_Click(object sender, RoutedEventArgs e)
+        private void BtnCenterLeft_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(1, 0);
         }
 
-        private void btnCenter_Click(object sender, RoutedEventArgs e)
+        private void BtnCenter_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(1, 1);
         }
 
-        private void btnCenterRight_Click(object sender, RoutedEventArgs e)
+        private void BtnCenterRight_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(1, 2);
         }
 
-        private void btnBottomLeft_Click(object sender, RoutedEventArgs e)
+        private void BtnBottomLeft_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(2, 0);
         }
 
-        private void btnBottomCenter_Click(object sender, RoutedEventArgs e)
+        private void BtnBottomCenter_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(2, 1);
         }
 
-        private void btnBottomRight_Click(object sender, RoutedEventArgs e)
+        private void BtnBottomRight_Click(object sender, RoutedEventArgs e)
         {
             ChooseGridLocation(2, 2);
         }
